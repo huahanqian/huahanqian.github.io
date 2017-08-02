@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Apps & Companies using MvvmCross
-permalink: /showcases/
 ---
 
 | Company | Apps | Info |
