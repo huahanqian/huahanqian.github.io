@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://localhost:4000/documentation/contribute/acknowledgements.html</loc>
+<lastmod>2017-08-08T22:10:36+08:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/documentation/contribute/contribute.html</loc>
+<lastmod>2017-08-08T22:10:36+08:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/documentation/contribute/mvvmcross-docs-style-guide.html</loc>
+<lastmod>2017-08-08T22:10:36+08:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/documentation/getting-started/debugging-with-symbols.html</loc>
+<lastmod>2017-08-08T22:10:36+08:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/documentation/getting-started/getting-started.html</loc>
+<lastmod>2017-08-08T22:10:36+08:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/documentation/getting-started/mvvmcross-packages.html</loc>
+<lastmod>2017-08-08T22:10:36+08:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/</loc>
 </url>
 </urlset>
