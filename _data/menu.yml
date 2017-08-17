@@ -1,0 +1,6 @@
+- title: "博客"
+  url: "/blog"
+- title: "攻略"
+  url: "/documentation"
+- title: "关于我们"
+  url: "/about"

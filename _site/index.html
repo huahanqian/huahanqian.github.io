@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<!-- head -->
-<head>
+
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- windows8 fix site -->
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/assets/img/favicon/ms-icon-144x144.png">
+    <!-- for some applicatons -->
     <meta name="theme-color" content="#ffffff">
     <!-- stylesheets -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-    <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="stylesheet" href="/assets/css/vs.css">
+    <link rel="stylesheet" href="/assets/css/normalize.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/rouge.css">
+    <link rel="stylesheet" href="/assets/css/main.css?v=1.0.0">
+    <style type="text/css">
+        .home>.landing {
+            background: url(/assets/img/intro.png) no-repeat center center;
+            background-size: 800px 300px; 
+        }
+        .footer>.navigation .avatar {
+            background-image: url(/assets/img/logo/avatar.png);
+        }
+    </style>
     <!-- jekyll-seo-tag -->
     <!-- Begin Jekyll SEO tag v2.2.3 -->
 <title>旅游百科 | 旅游百科是关于旅游的相关知识， 以及”吃、住、行、游、购、娱”。</title>
@@ -24,8 +34,10 @@
 <link rel="canonical" href="http://localhost:4000/" />
 <meta property="og:url" content="http://localhost:4000/" />
 <meta property="og:site_name" content="旅游百科" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@trip" />
 <script type="application/ld+json">
-{"@context":"http://schema.org","@type":"WebSite","name":"旅游百科","headline":"旅游百科","description":"旅游百科是关于旅游的相关知识， 以及”吃、住、行、游、购、娱”。","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/logo/avatar.png"}},"url":"http://localhost:4000/"}</script>
+{"@context":"http://schema.org","@type":"WebSite","name":"trip","headline":"旅游百科","description":"旅游百科是关于旅游的相关知识， 以及”吃、住、行、游、购、娱”。","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/logo/avatar.png"}},"sameAs":["https://twitter.com/trip","https://github.com/trip"],"url":"http://localhost:4000/"}</script>
 <!-- End Jekyll SEO tag -->
 
     <!-- favicons and rss -->
@@ -39,26 +51,27 @@
     <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicon/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favicon/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/assets/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
     <link rel="manifest" href="/assets/img/favicon/manifest.json">
 </head>
-<body>
-    <!-- header -->
+  
+  <body>
+
     <header class="header" role="banner" aria-label="Header">
     <button class="hamburger-button" onclick="hamburgerMenu();" role="button" aria-label="Hamburger menu button">
         <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
     </button>
     <a href="/" class="logo" role="link" aria-label="Home">
-        <img alt="旅游百科" src="/assets/img/logo/MvvmCross-logo.png" role="img" aria-label="Logo"/>
+        <img alt="旅游百科" src="/assets/img/logo/logo.png" role="img" aria-label="Logo"/>
     </a>
     <nav class="navigation" role="navigation" aria-label="Navigation">
         <ul role="menu" aria-hidden="true" aria-label="Navigation menu">
             <li role="menuitem" aria-label="Navigation menu item">
                 <a href="/" class="logo" role="menuitem" aria-label="Home">
-                    <img alt="旅游百科" src="/assets/img/logo/MvvmCross-logo.png" role="img" aria-label="Logo"/>
+                    <img alt="旅游百科" src="/assets/img/logo/logo.png" role="img" aria-label="Logo"/>
                 </a>
             </li>
             
@@ -66,7 +79,7 @@
             
             <li role="menuitem"><a href="/documentation" role="menuitem" aria-label="攻略">攻略</a></li>
             
-            <li role="menuitem"><a href="/support" role="menuitem" aria-label="支持">支持</a></li>
+            <li role="menuitem"><a href="/about" role="menuitem" aria-label="关于我们">关于我们</a></li>
             
         </ul>
     </nav>
@@ -91,72 +104,39 @@
         
         <a href="/documentation" role="menuitem" aria-label="攻略">攻略</a>
         
-        <a href="/support" role="menuitem" aria-label="支持">支持</a>
+        <a href="/about" role="menuitem" aria-label="关于我们">关于我们</a>
         
     </div>
     <div class="doc-nav" role="navigation" aria-label="Documentation navigation">
         
         
-        
-        <p role="presentation" aria-label="Category name">Getting-started</p>
-        <ul role="menu" aria-hidden="true" aria-label="Navigation menu">
-        
-        
-        <li role="menuitem" aria-label="Navigation menu item"><a href="/documentation/getting-started/getting-started.html" class="doc-link" role="link" aria-label="Getting Started with MvvmCross">Getting Started with MvvmCross</a></li>
-        
-        <li role="menuitem" aria-label="Navigation menu item"><a href="/documentation/getting-started/mvvmcross-packages.html" class="doc-link" role="link" aria-label="MvvmCross Packages">MvvmCross Packages</a></li>
-        
-        <li role="menuitem" aria-label="Navigation menu item"><a href="/documentation/getting-started/debugging-with-symbols.html" class="doc-link" role="link" aria-label="Debugging with Symbols">Debugging with Symbols</a></li>
-        
-        </ul>
-        
-        
-        <p role="presentation" aria-label="Category name">Contributing</p>
-        <ul role="menu" aria-hidden="true" aria-label="Navigation menu">
-        
-        
-        <li role="menuitem" aria-label="Navigation menu item"><a href="/documentation/contribute/contribute.html" class="doc-link" role="link" aria-label="New contributions">New contributions</a></li>
-        
-        <li role="menuitem" aria-label="Navigation menu item"><a href="/documentation/contribute/mvvmcross-docs-style-guide.html" class="doc-link" role="link" aria-label="Style Guide">Style Guide</a></li>
-        
-        <li role="menuitem" aria-label="Navigation menu item"><a href="/documentation/contribute/acknowledgements.html" class="doc-link" role="link" aria-label="Acknowledgements">Acknowledgements</a></li>
-        
-        </ul>
-        
     </div>
 </nav>
-    <!-- main content -->
+
     <main class="container" role="main">
         <article class="home" role="article">
     <section class="landing" role="document">
-        <h1 class="title" role="presentation">Learn once, write anywhere</h1>
-        <p class="subtitle">Build polished mobile apps with MvvmCross</p>
-        <a class="start-button" href="/documentation/getting-started/getting-started.html" role="link">Get started</a>
+        <h1 class="title" role="presentation">Learn once, go anywhere</h1>
+        <p class="subtitle">Build polished apps with AtInf</p>
+        <a class="start-button" href="/documentation/start/getting-started" role="link">Get started</a>
     </section>
     <section class="description" role="document">
-        <h2 role="presentation">Get the most out of Xamarin using MvvmCross</h2>
-        <p>Build clean, pixel perfect, native UIs. Share behavior and business logic in a single codebase across supported
-        platforms, using the Model-View-ViewModel (MVVM) design pattern. MvvmCross is a framework specifically developed
-        for Xamarin and the mobile ecosystem. It supports Xamarin.iOS, Xamarin.Android, Xamarin.Mac, Xamarin.Forms, Universal
-        Windows Platform (UWP) and Windows Presentation Framework (WPF)</p>
+        <h2 role="presentation">Get the most out of apps using AtInf</h2>
+        <p>Discover the innovative world of Apple and shop everything 
+            iPhone, iPad, Apple Watch, Mac, and Apple TV, plus explore accessories, 
+            entertainment, and expert device support</p>
     </section>
     <section class="companies" role="document">
-        <h2 role="presentation">Over 5000 companies rely on MvvmCross</h2>
+        <h2 role="presentation">Over 100 companies rely on AtInf</h2>
         <div class="company-gallerys">
-            <div class="gallery"><img src="/assets/img/companies/xamarin.png" alt="Xamarin" role="img"></div>
-            <div class="gallery"><img src="/assets/img/companies/microsoft.png" alt="Microsoft" role="img"></div>
-            <div class="gallery"><img src="/assets/img/companies/24ent.png" alt="24-7 Entertainment" role="img"></div>
-            <div class="gallery"><img src="/assets/img/companies/xablu.png" alt="XABLU" role="img"></div>
-            <div class="gallery"><img src="/assets/img/companies/olo.png" alt="Olo" role="img"></div>
+            <div class="gallery"><img src="/assets/img/companies/bawanglong.jpg" alt="bawanglong" role="img"></div>
+            <div class="gallery"><img src="/assets/img/companies/bawanglong.jpg" alt="bawanglong" role="img"></div>
+            <div class="gallery"><img src="/assets/img/companies/bawanglong.jpg" alt="bawanglong" role="img"></div>
+            <div class="gallery"><img src="/assets/img/companies/bawanglong.jpg" alt="bawanglong" role="img"></div>
+            <div class="gallery"><img src="/assets/img/companies/bawanglong.jpg" alt="bawanglong" role="img"></div>
+            <div class="gallery"><img src="/assets/img/companies/bawanglong.jpg" alt="bawanglong" role="img"></div>
         </div>
-        <a class="showcases-button" href="/showcases" role="link">See all showcases</a>
-    </section>
-    <section class="backers" role="document">
-        <div class="opencollective"><script src="https://opencollective.com/MvvmCross/banner.js"></script></div>
-        <h2 role="presentation">And over 175 contributors!</h2>
-        <a href="https://github.com/MvvmCross/MvvmCross/graphs/contributors" target="_blank" role="link">
-            <img alt="Contributors" src="https://opencollective.com/mvvmcross/contributors.png?avatarHeight=36&amp;button=false&amp;width=1140&amp;margin=4" role="img">
-        </a>
+        <a class="showcases-button" href="/about/showcases" role="link">See all showcases</a>
     </section>
 </article>
 
@@ -164,23 +144,16 @@
             <i class="fa fa-angle-double-up" aria-hidden="true"></i>
         </div>
     </main>
-    <!-- footer -->
-    
-<footer class="footer" role="contentinfo" aria-label="Site footer">
+
+    <footer class="footer" role="contentinfo" aria-label="Site footer">
     <div class="navigation" role="navigation" aria-label="Footer links">
-        <a href="http://localhost:4000" class="avatar" role="link" aria-label="github"></a>
+        <a href="http://localhost:4000" class="avatar" role="link"></a>
         <ul role="menubar" aria-label="Footer links menubar">
-            <li class="footer-products" role="menuitem" aria-label="Products">
-                Products
-                <ul role="menu" aria-hidden="true" aria-label="Products link">
-                    <li role="listitem" aria-label="Products link item"><a href="github" target="_blank" role="link" aria-label="github">github</a></li>
-                    <li role="listitem" aria-label="Products link item"><a href="/documentation/plugins/3rd-party-plugins" role="link" aria-label="Plugins">Plugins</a></li>
-                    <li role="listitem" aria-label="Products link item"><a href="/documentation/samples/samples" role="link" aria-label="Samples">Samples</a></li>
-                </ul>
-            </li>
             <li class="footer-blog" role="menuitem" aria-label="Blog">
                 Blog
                 <ul role="menu" aria-hidden="true" aria-label="Blog link">
+                    
+                    <li role="listitem" aria-label="Blog link item"><a href="/blog/2016-05-20/welcome-to-jekyll.html" role="link" aria-label="Welcome To Jekyll">Welcome To Jekyll</a></li>
                     
                     <li role="listitem" aria-label="Blog link item"><a href="/blog" role="link" aria-label="Read more">Read More</a></li>
                 </ul>
@@ -188,60 +161,68 @@
             <li class="footer-organization" role="menuitem" aria-label="Organization">
                 Organization
                 <ul role="menu" aria-hidden="true" aria-label="Organization link">
-                    <li role="listitem" aria-label="Organization link item"><a href="/about" role="link" aria-label="About MvvmCross">About MvvmCross</a></li>
+                    <li role="listitem" aria-label="Organization link item"><a href="/about" role="link" aria-label="About">About</a></li>
                     <li role="listitem" aria-label="Organization link item"><a href="/branding" role="link" aria-label="Branding">Branding</a></li>
-                    <li role="listitem" aria-label="Organization link item"><a href="github/blob/master/CONTRIBUTING.md" role="link" target="_blank" aria-label="Contributing">Contributing</a></li>
-                    <li role="listitem" aria-label="Organization link item"><a href="github/blob/master/LICENSE" role="link" target="_blank" aria-label="License">License</a></li>
-                    <li role="listitem" aria-label="Organization link item"><a href="github/blob/master/CODE_OF_CONDUCT.md" target="_blank" role="link" aria-label="CodeOfConduct">Code of Conduct</a></li>
-                    <li role="listitem" aria-label="Organization link item"><a href="https://opencollective.com/mvvmcross" target="_blank" role="link" aria-label="DonationsSponsors">Donations & Sponsors</a></li>
                 </ul>
             </li>
             <li class="footer-connect" role="menuitem" aria-label="Connect">
                 Connect
                 <ul role="menu" aria-hidden="true" aria-label="Connect link">
-                    <li role="listitem" aria-label="Connect link item"><a href="github" target="_blank" role="link" aria-label="GitHub">GitHub</a></li>
-                    <li role="listitem" aria-label="Connect link item"><a href="github" target="_blank" role="link" aria-label="GitHub Issues">GitHub Issues</a></li>
-                    <li role="listitem" aria-label="Connect link item"><a href="https://xamarinchat.herokuapp.com/" target="_blank" role="link" aria-label="Slack">Slack</a></li>
-                    <li role="listitem" aria-label="Connect link item"><a href="https://stackoverflow.com/questions/tagged/mvvmcross" target="_blank" role="link" aria-label="Stack Overflow">Stack Overflow</a></li>
-                    <li role="listitem" aria-label="Connect link item"><a href="https://forums.xamarin.com" target="_blank" role="link" aria-label="Xamarin Forums">Xamarin Forums</a></li>
-                    <li role="listitem" aria-label="Connect link item"><a href="https://www.linkedin.com/groups/8456977" target="_blank" role="link" aria-label="Linkedin">Linkedin</a></li>
-                    <li role="listitem" aria-label="Connect link item"><a href="https://twitter.com/" target="_blank" role="link" aria-label="Twitter">Twitter</a></li>
+                    <li role="listitem" aria-label="Connect link item"><a href="https://github.com" target="_blank" role="link" aria-label="GitHub">GitHub</a></li>
+                    <li role="listitem" aria-label="Connect link item"><a href="https://stackoverflow.com" target="_blank" role="link" aria-label="Stack Overflow">Stack Overflow</a></li>
+                    <li role="listitem" aria-label="Connect link item"><a href="https://www.linkedin.com" target="_blank" role="link" aria-label="Linkedin">Linkedin</a></li>
                 </ul>
             </li>
         </ul>
     </div>
     <div class="socials"  role="navigation" aria-label="Social links">
         <ul role="menu" aria-hidden="true" aria-label="Social link">
-            <li role="listitem" aria-label="Social link item"><a href="github" target="_blank" role="link" aria-label="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-            <li role="listitem" aria-label="Social link item"><a href="https://twitter.com/" target="_blank" role="link" aria-label="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-            <li role="listitem" aria-label="Social link item"><a href="https://xamarinchat.herokuapp.com/" target="_blank" role="link" aria-label="Slack"><i class="fa fa-slack" aria-hidden="true"></i></a></li>
-            <li role="listitem" aria-label="Social link item"><a href="https://stackoverflow.com/questions/tagged/mvvmcross" target="_blank" role="link" aria-label="Stack Overflow"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a></li>
-            <li role="listitem" aria-label="Social link item"><a href="https://www.linkedin.com/groups/8456977" target="_blank" role="link" aria-label="Linkedin"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+            <li role="listitem" aria-label="Social link item"><a href="https://github.com" target="_blank" role="link" aria-label="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+            <li role="listitem" aria-label="Social link item"><a href="https://twitter.com" target="_blank" role="link" aria-label="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li role="listitem" aria-label="Social link item"><a href="https://slack.com" target="_blank" role="link" aria-label="Slack"><i class="fa fa-slack" aria-hidden="true"></i></a></li>
+            <li role="listitem" aria-label="Social link item"><a href="https://stackoverflow.com" target="_blank" role="link" aria-label="Stack Overflow"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a></li>
+            <li role="listitem" aria-label="Social link item"><a href="https://www.linkedin.com" target="_blank" role="link" aria-label="Linkedin"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
             <li role="listitem" aria-label="Social link item"><a href="/feed.xml" role="link" aria-label="RSS"><i class="fa fa-rss-square" aria-hidden="true"></i></a></li>
         </ul>
     </div>
     <div class="copyright" role="contentinfo" aria-label="Copyright">
-        <p>&copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> MvvmCross</p>
+        <p>&copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> AtInf</p>
+        <div>
+            <p>沪ICP备15012212号</p>
+        </div>
         <div class="right">
             <a href="/sitemap.xml" target="_blank" role="link" aria-label="Site map">Site Map</a>
         </div>
     </div>
 </footer>
 
-    <!-- scripts -->
-    <script src="/assets/js/hamburger-menu.js"></script>
-<script src="/assets/js/elevator.min.js"></script>
-<script src="/assets/js/back-to-top.js"></script>
-    <!-- google analytics -->
-    <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-104195308-1', 'auto');
-  ga('send', 'pageview');
+    <script>
+    var hamburgerMenu = openMenu("hamburger-menu");
+    function openMenu(id) {
+        var element = document.getElementById(id);
+        // var elementLeft = document.defaultView.getComputedStyle(element, null).left;
+        return function () {
+            with (element.style) {
+                left = (left === "0px") ? "-284px" : "0px";
+            }
+        };
+    }
+</script>
+
+<!-- back to top -->
+<script src="/assets/js/elevator.min.js"></script>
+<script>
+    window.onload = function () {
+        var elevator = new Elevator({
+            element: document.querySelector('#back-to-top'),
+            duration: 1000 // milliseconds
+        });
+    }
 
 </script>
-</body>
+
+    
+
+  </body>
 </html>

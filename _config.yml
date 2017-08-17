@@ -21,28 +21,23 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.ctrip.wiki" # the base hostname & protocol for your site, e.g. http://example.com
 
+twitter_username: trip
+github_username:  trip
+google_analytics: UA-104195308-1
+# disqus.shortname: xxxxxx
+
 lang: zh-CN
-
-# twitter_username: jekyllrb
-# github_username:  jekyll
-
-github: github
 
 # Build settings
 markdown: kramdown
-# highlighter: rouge
-
-# kramdown:
-#   input: GFM
-#   hard_wrap: false
-
-# sass:
-#   style: compressed
 
 # theme: minima
-# End
 
-# Gem settings
+highlighter: rouge
+
+sass:
+  style: compact  # nested expanded compact compressed 
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
@@ -51,72 +46,51 @@ plugins:
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - README.md
-  - SITECHANGELOG.md
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
 #   - node_modules
 #   - vendor/bundle/
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-# End
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
 
+# End
 
 # Date format settings
-date_format: "%Y-%m-%d %H:%M:%S"
+date_format: "%Y-%m-%d"
 # End
 
-# 博客的默认模板 date=/:categories/:year/:month/:day/:title.html
-# 页面的默认模板是 /:path/:basename
-# 集合的默认模板是 /:collection/:path
-
-
-# Site permalink settings
-# permalink: /:title/  # default = permalink:date
-# permalink: /:title
+# Posts permalink settings 
+# permalink: /:categories/:year/:month/:day/:title.html
+permalink: /blog/:categories/:year-:month-:day/:title.html
 # End
 
-# Collections settings
+# Collections documentation settings
 collections:
   documentation:
     output: true
-    # permalink: /:collection/:path    # default = permalink:/:collection/:path
+    permalink: /:collection/:path
 # End
 
-# Site menu settings
-menu:
-  - title: "博客"
-    url: "/blog"
-  - title: "攻略"
-    url: "/documentation"
-  - title: "支持"
-    url: "/support"
+# Github metadata settings
+repository: trip/trip
 # End
-
-category_order:
-  - 'Getting-started'
-  # - 'Fundamentals'
-  # - 'TipCalc Tutorial'
-  # - 'Platform specifics'
-  # - 'Upgrading'
-  # - 'Samples'
-  # - 'Plugins'
-  # - 'Testing'
-  - 'Contributing'
-  # - 'Licensing'
-
 
 # jekyll-seo-tag settings
-# social:
-#   name: ctripwiki
-#   links:
-#     - https://twitter.com/ctripwiki
-#     - https://github.com/ctripwiki
+social:
+  name: trip
+  links:
+    - https://twitter.com/trip
+    - https://github.com/trip
 
 logo: /assets/img/logo/avatar.png
 
-# twitter:
-#   username: ctripwiki
+twitter:
+  username: trip
 #End
+

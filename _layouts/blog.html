@@ -1,13 +1,13 @@
 ---
 layout: default
 ---
+
 <section class="blog">
-    {{ content }}
     <ul class="list">
     {% for post in site.posts %}
         <li>
             <time class="time">
-                {% assign date_format = site.date_format | default: "%b %-d, %Y" %}
+                {% assign date_format = site.date_format %}
                 {{ post.date | date: date_format }}
             </time>
             <h2>
@@ -19,6 +19,6 @@ layout: default
         </li>
     {% endfor %}
     </ul>
-    <p class="rss-subscribe">subscribe <a href="{{ '/feed.xml' | relative_url }}" role="link">via RSS</a></p>
+    <p class="rss-subscribe">订阅 <a href="{{ '/feed.xml' | relative_url }}" role="link">RSS</a></p>
 </section>
 {% include deeplink.html %}

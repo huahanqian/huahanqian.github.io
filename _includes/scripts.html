@@ -1,3 +1,24 @@
-<script src="{{ '/assets/js/hamburger-menu.js' | relative_url }}"></script>
+<script>
+    var hamburgerMenu = openMenu("hamburger-menu");
+    function openMenu(id) {
+        var element = document.getElementById(id);
+        // var elementLeft = document.defaultView.getComputedStyle(element, null).left;
+        return function () {
+            with (element.style) {
+                left = (left === "0px") ? "-284px" : "0px";
+            }
+        };
+    }
+</script>
+
+<!-- back to top -->
 <script src="{{ '/assets/js/elevator.min.js' | relative_url }}"></script>
-<script src="{{ '/assets/js/back-to-top.js' | relative_url }}"></script>
+<script>
+    window.onload = function () {
+        var elevator = new Elevator({
+            element: document.querySelector('#back-to-top'),
+            duration: 1000 // milliseconds
+        });
+    }
+
+</script>
